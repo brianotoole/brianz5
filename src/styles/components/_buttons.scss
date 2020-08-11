@@ -1,0 +1,47 @@
+// Buttons
+
+.btn {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  margin-top: 20px;
+  min-width: 180px;
+  padding: 12px 24px;
+  font-family: $font-body;
+  font-size: rem(20);
+  color: $color-black;
+  background-color: transparent;
+  border: 2px solid $color-black;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition-property: color;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  transition-property: color;
+  transition-duration: 0.3s;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-black;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover, &:focus, &:active {
+    color: white;
+    &:before {
+      transform: scaleX(1);
+    }
+  }
+}

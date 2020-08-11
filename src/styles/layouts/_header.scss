@@ -1,0 +1,38 @@
+// HEADER
+.header {
+  padding: 40px 0;
+}
+
+// NAV
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 0;
+  list-style-type: none;
+  border-top: 2px solid $color-primary;
+  li {
+    width: auto;
+    @media (max-width: $bp-md) {
+      margin-top: 10px;
+    }
+    &.logo {
+      //@media (max-width: $bp-md) {
+        //order: -1;
+        //width: 100%;
+        //margin-top: 0;
+      //}
+    }
+  }
+  span {
+    color: $color-secondary;
+    @media (max-width: $bp-md) {
+      display: none;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

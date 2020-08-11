@@ -1,0 +1,276 @@
+// PAGE
+// Global page elements
+
+
+// Global page containers, wrappers
+.site-wrapper {}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding-left: 110px;
+  padding-right: 110px;
+  @media (max-width: $bp-md) {
+    max-width: 1000px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  @media (max-width: $bp-md) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.re-li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.half {
+  width: 50%;
+  @media (max-width: $bp-md) {
+    width: 100%;
+  } 
+}
+.left {
+  padding-right: 8.5%;
+  @media (max-width: $bp-md) {
+    padding-right: 0;
+  }
+}
+.one-third {
+  width: 33.333%;
+  @media (max-width: $bp-md) {
+    width: 100%;
+  }
+}
+
+.two-third {
+  width: 66.666%;
+  @media (max-width: $bp-md) {
+    width: 100%;
+  }
+}
+// global sections / page wraps
+.section-wrap {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.page-header {
+  padding: 0 0 30px;
+}
+
+
+// section-template-specific
+.section-recent-work {
+  padding-top: 0;
+  padding-bottom: 90px;
+}
+
+.section-title {
+ &--pad-btm {
+   padding-bottom: 15px;
+ }
+}
+
+.recent-work-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  li {
+    padding: 0;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+    @extend .h3;
+  }
+}
+
+.recent-work-list--is-home {
+  position: relative;
+}
+
+.work-item-image {
+  position: absolute;
+  width: auto;
+  max-width: 60%;
+  height: auto;
+  top: -40px;
+  right: 0;
+  z-index: -1;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: $bp-md) {
+    display: none;
+  }
+}
+
+// ABOUT & PROJECT SINGLE
+.about-featured {
+  padding-bottom: 60px;
+  &__img {}
+}
+
+.about-meta {}
+
+.about-meta__date {}
+
+.about-meta__type {
+  &--list {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+    li:before {
+      content: '+';
+      display: inline-block;
+      padding-right: 5px;
+    }
+  }
+}
+
+.about-meta__agency {
+  padding-top: 15px;
+}
+
+.about-description {
+  padding-top: 30px;
+  @media (min-width: $bp-md) {
+    padding-top: 0;
+  }
+}
+
+.about-work-items {
+  padding-bottom: 0;
+
+  &--is-full {
+    width: 100%;
+  }
+  &__item img {
+    display: block;
+    margin: auto auto 30px;
+  }
+}
+
+.section-cta {
+  padding-top: 70px;
+  padding-bottom: 30px;
+
+  &--lg {
+    padding-top: 40px;
+    padding-bottom: 90px;
+  }
+}
+
+
+
+
+// WORK
+.page-work .recent-work-list {
+  margin: -10px;
+  li {
+    width: calc(50% - 30px);
+    height: auto;
+    margin: 15px;
+    @media (max-width: $bp-md) {
+      width: calc(100% - 30px);
+    }
+  }
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      transition: all 0.3s ease-out;
+    }
+    &:hover {
+      &:before {
+        background: rgba(black, 0.99);
+      }
+      .recent-work-list__hover {
+        display: flex;
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+      }
+    }
+  }
+}
+
+.recent-work-list__hover {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  font-size: rem(22);
+  color: $color-white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1;
+  a {
+    display: flex;
+    color: $color-white;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+  }
+}
+
+// Main content
+.cta {
+  .btn {
+    margin-top: 10px;
+  }
+}
+
+
+.entry-content {
+  h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+    margin-top: 40px;
+  }
+  p, ol, ul, dl {
+    font-size: rem(16);
+  }
+}
+
+// Footer
+.footer {
+  background-color: $color-primary;
+  color: $color-white;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  a {
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+

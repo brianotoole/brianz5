@@ -1,0 +1,45 @@
+---
+layout: page
+title:
+description: Brian O'Toole is a creative development lead with 11 years of experience combining marketing & advocacy with digital best practices. Currently located in Tampa, FL.
+bodyclass: page-home
+hero: #
+---
+
+<div class="page-home">
+
+<section class="section-intro section-wrap no-pad-t">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10">
+        <h1 class="section-title h3">I am a creative development lead with 11 years of experience combining marketing & advocacy with digital best practices.</h1>
+      </div><!--/.col-->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</section>
+
+<section class="section-recent-work section-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="section-title section-title--pad-btm h5">Featured Work<span class="dash"></span></h2>
+        <ul class="re-li recent-work-list recent-work-list--is-home">
+          {% for project in site.projects %}
+          <li>
+            <a href="{{ project.url }}" data-src="{{ site.baseurl}}/assets/images/{{ project.featuredImage }}" class="hvr-underline-from-left">
+              {{ project.title }}
+            </a>
+          </li>
+          {% endfor %}
+          <div class="work-item-image"><img src=""></div>
+        </ul>
+      </div>
+      <!--/.col-->
+    </div>
+    <!--/.row-->
+  </div>
+  <!--/.container-->
+</section>
+
+
+</div><!--/.page-home-->
